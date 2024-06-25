@@ -1,3 +1,2 @@
 FROM nginx
-USER root
-RUN /usr/share/nginx/html/index.html
+CMD ["sleep", "100"]
