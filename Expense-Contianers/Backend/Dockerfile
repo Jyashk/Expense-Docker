@@ -7,4 +7,4 @@ ADD https://expense-builds.s3.us-east-1.amazonaws.com/expense-backend-v2.zip /ap
 RUN unzip *.zip
 RUN npm install
 EXPOSE 8080
-CMD [ "node" "start" ]
+CMD [ "node" "index.js" ]
