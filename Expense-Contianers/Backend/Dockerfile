@@ -3,7 +3,7 @@ ENV DB_HOST=mysql
 RUN useradd expense
 RUN mkdir /app
 WORKDIR /app
-COPY  *.js /app
+COPY  * /app
 RUN npm install
 EXPOSE 8080
 USER expense
