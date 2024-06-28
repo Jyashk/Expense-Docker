@@ -13,5 +13,5 @@ RUN mkdir -p /var/cache/nginx/client_temp && \
 RUN touch /var/run/nginx.pid && \
     chown -R nginx:nginx /var/run/nginx.pid /run/nginx.pid
 COPY expense.conf /etc/nginx/nginx.conf
-COPY * /usr/share/nginx/html/
+COPY code /usr/share/nginx/html/
 USER nginx
