@@ -1,4 +1,4 @@
-FROM node:20
+FROM node:20-alpine
 ENV DB_HOST=mysql
 RUN useradd expense
 RUN mkdir /app
