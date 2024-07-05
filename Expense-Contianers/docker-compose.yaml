@@ -1,5 +1,4 @@
 version: "3"
-networks: expense
 services:
   mysql: 
    image: "mysql-v.1.0"
@@ -7,19 +6,25 @@ services:
      - mysql-volume:/var/lib/mysql
    ports:
       - 3306:3306
-   depends_on:
-      - backend
   backend:
    image: "backend-v.1.0"
    ports:
     - 8080:8080
+  depends_on:
+      - mysql
   frontend:
     image: "frontend:v.1.0"
     ports:
-     80:80
+    - 80:80
+    depends_on:
+      - backend
 volumes:
      mysql-volume:
       external: true
+networks: 
+    expense:
+    driver: bridge
+
 
 
 
